@@ -1,4 +1,4 @@
-Proyecto de Detección de Objetos con YOLO
+##Proyecto de Detección de Objetos con YOLO
 Descripción
 Este proyecto implementa un sistema de detección de objetos en tiempo real utilizando el modelo YOLOv8, una de las arquitecturas más avanzadas en este campo. El código permite detectar objetos tanto en imágenes estáticas como en videos.
 

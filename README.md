@@ -27,7 +27,7 @@ Si deseas aislar las dependencias del proyecto, puedes crear un entorno virtual:
 ```bash
 python -m venv venv
 source venv/bin/activate  # En Windows: venv\Scripts\activate
-
+```
 
 ## 2. Instalar dependencias
 
@@ -35,14 +35,14 @@ Instala las bibliotecas necesarias para usar YOLOv8 y realizar la detección de 
 
 ```bash
 pip install ultralytics opencv-python matplotlib numpy
-
+```
 ## 3. Descargar el Modelo Preentrenado (Opcional)
 
 Si no tienes el modelo preentrenado, puedes descargarlo utilizando el siguiente código:
 
 ```python
 model = YOLO('yolov8n.pt')
-
+```
 ## 4. Uso
 
 ### Detección en Video
@@ -52,7 +52,7 @@ model = YOLO('yolov8n.pt')
 
    ```bash
    python yolo.py
-
+   ```
 3. **Visualizar**: El video se reproducirá con los objetos detectados resaltados. Para salir, presiona la tecla q.
 
 
@@ -67,6 +67,7 @@ model = YOLO('yolov8n.pt')
 
    ```bash
    python yoloimg.py
+   ```
 
 3. **Visualizar la imagen**:
    Después de ejecutar el script, se mostrará una ventana con la imagen procesada y los objetos detectados. Las detecciones aparecerán con cuadros delimitadores alrededor de los objetos identificados.

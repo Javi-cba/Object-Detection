@@ -18,7 +18,7 @@ Este proyecto implementa un sistema de detección de objetos en tiempo real util
 
 1. **Clonar el repositorio**:
    ```bash
-   git clone https://tu-repositorio.git
+   git clone https://github.com/Javi-cba/Object-Detection.git
 
 ## 1. Crear un entorno virtual (opcional)
 

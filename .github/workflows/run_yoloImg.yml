@@ -1,0 +1,33 @@
+name: Run YOLO every 2 minutes
+
+on:
+  workflow_dispatch:  
+  schedule:
+    - cron: "*/2 * * * *" 
+
+jobs:
+  run-yolo:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: '3.8'
+
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install ultralytics opencv-python matplotlib numpy
+
+    - name: Run YOLO script
+      run: python yoloimg.py
+
+    - name: Commit and push results
+      uses: stefanzweifel/git-auto-commit-action@v5
+      with:
+        commit_message: "Updated YOLO results"
+        file_pattern: "output.png"

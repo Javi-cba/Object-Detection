@@ -7,7 +7,7 @@ on:
 
 jobs:
   run-yolo:
-runs-on: ubuntu-22.00
+    runs-on: ubuntu-22.04
 
     steps:
     - name: Checkout repository
@@ -23,7 +23,6 @@ runs-on: ubuntu-22.00
         python -m pip install --upgrade pip
         pip install ultralytics opencv-python matplotlib numpy
         pip install -r requirements.txt
-
 
     - name: Run YOLO script
       run: python yoloimg.py

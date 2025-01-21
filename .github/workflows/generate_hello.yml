@@ -22,8 +22,13 @@ jobs:
       run: |
         python generate_hello.py
 
-    - name: Commit and push generated JSON
+       - name: Commit and push generated JSON
       uses: stefanzweifel/git-auto-commit-action@v5
       with:
         commit_message: "Add generated hello messages JSON"
         file_pattern: "hello_messages.json"
+        commit_user_name: github-actions[bot]
+        commit_user_email: 41898282+github-actions[bot]@users.noreply.github.com
+        commit_author: Javi-cba <96403950+Javi-cba@users.noreply.github.com>
+      env:
+        GITHUB_TOKEN: ${{ secrets.PAT_TOKEN }}
